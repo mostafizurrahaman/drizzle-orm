@@ -1,0 +1,1 @@
+CREATE TYPE "public"."productStatus" AS ENUM('active', 'inactive');

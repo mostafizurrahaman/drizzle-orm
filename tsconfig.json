@@ -1,0 +1,53 @@
+{
+  // Visit https://aka.ms/tsconfig to read more about this file
+  "include": ["src"],
+  "exclude": ["node_modules", "dist", "src/test"],
+  "compilerOptions": {
+    // File Layout
+    "rootDir": "./src",
+    "outDir": "./dist",
+
+    // Environment Settings
+    // See also https://aka.ms/tsconfig/module
+    "module": "nodenext",
+    "target": "esnext",
+
+    // For nodejs:
+    "lib": ["esnext"],
+    "types": ["node"],
+    // and npm install -D @types/node
+
+    // Other Outputs
+    "sourceMap": true, // original typescript er source file make kore ( index.js -> index.js.map) into output folder.
+    "declaration": true, // declaration file make kore, backend application a dorkar hoy na, package make korle kaje lage. .d.ts file make kore
+    "declarationMap": true, // Declaration file থেকে original TypeScript source-এ navigate করতে সাহায্য করে (.d.ts.map) file make kore
+
+    // Stricter Typechecking Options
+    "noUncheckedIndexedAccess": true, // array or object er index related error dorte help kore
+    "exactOptionalPropertyTypes": true, // optional property related
+
+    // Style Options
+    // "noImplicitReturns": true, // function  explicitly return korbe kina  chec kore
+    // "noImplicitOverride": true, // Parent class er method override korle, jodi enable thake override keyword use korte baddo kore.
+    // "noUnusedLocals": true,
+    // "noUnusedParameters": true,
+    "noFallthroughCasesInSwitch": true,
+    // "noPropertyAccessFromIndexSignature": true, // bracket notation mandatory kora jonno object er khetre.
+
+    // Recommended Options
+    "strict": true,
+    "jsx": "react-jsx",
+    "verbatimModuleSyntax": true,
+    "isolatedModules": true,
+    "noUncheckedSideEffectImports": true,
+    "moduleDetection": "force",
+
+    "skipLibCheck": true, // third party file typescript er error checking reduce kore
+
+    // Ts import related:
+    "allowImportingTsExtensions": true,
+    "rewriteRelativeImportExtensions": true, // ts a import korar jonno
+    "noEmit": false,
+    "emitDeclarationOnly": true
+  }
+}
